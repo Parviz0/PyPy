@@ -887,7 +887,9 @@ with open('123.txt', 'r') as file:
 # git commit -m "first commit"
 # git push
 
-
+# Откатка
+# git reset --hard
+#
 
 
 
