@@ -892,7 +892,7 @@ with open('123.txt', 'r') as file:
 
 
 
-
+# 13 урок
 
 
 
