@@ -8,8 +8,8 @@ x = 'mk'
 s = 'NARUTOOOOOO'
 m = 'SAAASUUUKEEE'
 print(a*b,x,s,m,'\n', 'что за ', sep='-', end='*** ')'''
-import csv
-import os
+# import csv
+# import os
 
 '''a = input("Умножение на 5, братанчик.\n")
 print(int(a) * 5)'''
@@ -953,4 +953,141 @@ try:
 except[TypeError]:
     print('Тип не верный')
 '''
+
+# 14 урок
+# Объектно-ориентированное программирование
+# Процедурное программирование - когда код идет как обычно линейно и всё воспринимаем объекты
+# Функцианальное программирование - когда мы прописываем функции, а потом можем их выполнять не линейно
+
+
+# Практика
+'''dict = {
+    'Sitora': 22,
+    'Arkadiy': 14,
+    'Sevara': 22,
+    'Parviz': 15,
+    'Temur': 16,
+    'Azamat': 16
+}
+
+
+
+def func(x):
+    result = sorted(x.items(), key=None)
+    return result
+
+print(func(dict))'''
+
+# реализация учителя:
+
+'''dict = {
+    'Sitora': 22,
+    'Arkadiy': 14,
+    'Sevara': 22,
+    'Parviz': 15,
+    'Temur': 16,
+    'Azamat': 16
+}
+def main(x):
+    result = []
+    for i in x.keys():
+        result.append(i)
+    result.sort()
+    return result
+    
+print(main(dict))'''
+
+# Метод - это процедура или функция, принадлежащая классу объектов
+# ООП - парадигма программирования, в которой основными концепциями являются понятия объектов и классов
+# Класс - тип данных, который создается для описания сложных объектов
+# Объект - это экземпляр класса
+# хранит конкретные значения свойств и информацию о принадлежности к классу
+# атрибут - свойство присущее объекту
+# метод - действие которое объект может выполнять над самим собой или другими объектами
+
+'''a = [4,12,6,7,2,8,9]
+
+print(sorted(a))
+a.sort()
+print(a)'''
+
+'''a = [4,12,6,7,2,8,9]
+
+print(type(a))''' # class list
+
+# чтобы отличать классы и функции можно писать классы с большой буквы, а функции с маленькой
+'''class Fruit:
+    name = None
+
+a = Fruit()
+b = Fruit()
+
+print(a.name)
+
+a.name = 'Apple'
+b.name = 'Otange'
+a.weight = 120
+b.weight = 150
+
+print(a.name)'''
+
+#
+
+'''class Fruit:
+    name = None
+    weight = None
+    def func(self, x):
+        self.weight += x
+
+a = Fruit()
+b = Fruit()
+a.weight = 100
+b.weight = 120
+a.func(50)
+b.func(20)
+print(a.weight)
+print(b.weight)'''
+
+# self - контекстный объект (меняется исходя из класса)
+
+'''class Car:
+    en_on = False
+    def start_en(self):
+        self.en_on = True
+    def drive(self, city):
+        if self.en_on:
+            print('Едем в город {}'.format(city))
+        else:
+            print('Не заведено')
+c = Car()
+d = Car()
+c.start_en()
+c.drive('Владивосток')
+d.drive('Vald')
+'''
+
+# Конструкторы
+
+'''class Car:
+    en_on = False
+    def __init__(self,b,c,d):
+        self.color = b
+        self.type = c
+        self.eng_voul = d
+    def start_en(self):
+        self.en_on = True
+    def drive(self, city):
+        if self.en_on:
+            print('Едем в город {}'.format(city))
+        else:
+            print('Не заведено')
+c = Car('red', 'sedan', 15)
+d = Car('blue', 'minivan', 200000000000000000000000000000000)
+c.start_en()
+c.drive('Владивосток')
+d.drive('Vald')'''
+
+# ООП. Инкапсуляция
+# Инкапсуляция - ограничение доступа к составляющим объект компонентам (методам и переменным)
+# / скрывать внутреннее устройства
 
